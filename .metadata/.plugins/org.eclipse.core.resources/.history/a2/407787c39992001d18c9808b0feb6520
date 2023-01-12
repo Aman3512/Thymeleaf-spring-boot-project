@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Thymeleaf Spring Boot WebApp</title>
+</head>
+<body>
+
+   <div align="center">
+   
+      <h1>User List</h1>
+      <table border="1">
+           <thead>
+               <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone</th>
+               </tr>
+           </thead>
+           <tbody>
+                <tr th:each="user : ${listUsers}">
+                   <td th:text="${user.firstName}"></td>
+                   <td th:text="${user.lastName}"></td>
+                   <td th:text="${user.phone}"></td>
+                </tr>
+           </tbody>
+           
+      </table>
+   
+   </div>
+
+</body>
+</html>
